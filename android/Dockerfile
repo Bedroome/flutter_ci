@@ -1,4 +1,4 @@
-FROM cirrusci/flutter:latest
+FROM cirrusci/flutter:beta
 
 ENV PUB_HOSTED_URL=https://pub.flutter-io.cn
 ENV FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
