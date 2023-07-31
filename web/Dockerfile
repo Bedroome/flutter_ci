@@ -1,3 +1,6 @@
-FROM cirrusci/flutter:stable
+FROM mobiledevops/flutter-sdk-image:latest
 
-RUN yes | /sdks/flutter/bin/flutter doctor
+RUN flutter config --enable-web \
+    && sudo apt-get update \
+    && sudo apt-get install -y chromium-browser \
+    && sudo rm -rf /var/lib/apt/lists/*
