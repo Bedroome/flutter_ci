@@ -1,4 +1,4 @@
-FROM debian:12.0-slim
+FROM debian:stable-slim
 
 # 安装flutter
 RUN apt update && apt install snapd && snap install flutter --classic
