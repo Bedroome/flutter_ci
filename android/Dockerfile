@@ -1,11 +1,7 @@
-FROM mobiledevops/flutter-sdk-image:latest
+FROM debian:12
 
-# ENV PUB_HOSTED_URL=https://pub.flutter-io.cn
-# ENV FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-
-# RUN yes | android list sdk
+# 安装flutter
+RUN apt update && apt install snapd && snap install flutter --classic
 
 RUN yes | flutter doctor --android-licenses \
     && flutter doctor
-
-# RUN yes | flutter doctor --android-licenses

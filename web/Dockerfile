@@ -1,3 +1,6 @@
-FROM mobiledevops/flutter-sdk-image:latest
+FROM debian:12
+
+# 安装flutter
+RUN apt update && apt install snapd && snap install flutter --classic
 
 RUN flutter doctor
